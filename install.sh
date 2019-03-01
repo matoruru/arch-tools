@@ -76,3 +76,6 @@ ln -s /usr/share/icons/Breeze_Default ~/.icons/breeze-cursors
 
 # enable tap as click
 sudo ln -srf 40-libinput.conf /usr/share/X11/xorg.conf.d/
+
+# enable network connection automatically
+sudo systemctl enable netctl.service
