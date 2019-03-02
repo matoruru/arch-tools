@@ -1,5 +1,5 @@
 sudo pacman -S jdk-openjdk
-yay -S android-platform android-sdk android-sdk-platform-tools android-sdk-build-tools
+yay -S android-platform android-sdk android-sdk-platform-tools android-sdk-build-tools aosp-devel
 
 sudo groupadd sdkusers
 sudo gpasswd -a matoruru sdkusers

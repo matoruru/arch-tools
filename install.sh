@@ -16,7 +16,7 @@ ping www.github.com -c5 -i 0.2 || ping_failure
 
 # install packages
 sudo pacman -Syu
-sudo pacman -S fish xmobar compton xorg-xinit rofi compton xmobar xorg-server xf86-video-intel xorg-apps neofetch tree feh time htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot wmname
+sudo pacman -S fish xmobar compton xorg-xinit rofi compton xmobar xorg-server xf86-video-intel xorg-apps neofetch tree feh time htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot wmname vim git openssh
 
 # install AUR packages
 cd ~/repositories/
