@@ -16,7 +16,7 @@ ping www.github.com -c5 -i 0.2 || ping_failure
 
 # install packages
 sudo pacman -Syu
-sudo pacman -S fish xmobar compton xorg-xinit rofi compton xmobar xorg-server xf86-video-intel xorg-apps neofetch tree feh time htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot vim git openssh jdk-openjdk adapta-gtk-theme
+sudo pacman -S fish xmobar compton xorg-xinit rofi compton xmobar xorg-server xf86-video-intel xorg-apps neofetch tree feh time htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot vim git openssh jdk-openjdk adapta-gtk-theme pacman-contrib
 
 # install AUR packages
 cd ~/repositories/
@@ -24,7 +24,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay -Syu
-yay -S breeze-default-cursor-theme paper-icon-theme ttf-monaco aosp-devel
+yay -S breeze-default-cursor-theme paper-icon-theme ttf-monaco aosp-devel typora polybar
 
 # install a file for todo list
 cp todolist.txt ~/
@@ -40,15 +40,16 @@ cp todolist.txt ~/
 cp -r Pictures ~/
 sudo cp setwp.sh /usr/local/bin/setwp
 sudo chmod +x /usr/local/bin/setwp
-curl -o ~/Pictures/archlinux.png http://wallpapercraft.site/uploads/posts/images/1514889-download-free-arch-linux-background.png
+curl -o ~/Pictures/gentoo-1920x1080.jpg https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
 mkdir -p ~/Pictures/wallpaper
-ln -srf ~/Pictures/archlinux.png ~/Pictures/wallpaper/main.jpg
+ln -srf ~/Pictures/gentoo-1920x1080.jpg ~/Pictures/wallpaper/main.jpg
 
 # install fish theme (yimmy)
 bash fish-theme.sh
 
 # install fonts
 mkdir ~/.fonts
+cp fonts/*ttf ~/
 find fonts/ -name "*.tar.bz2"|xargs -n 1 -I XXX tar vxf XXX -C ~/.fonts/
 ( cd ~/.fonts;fc-cache -vf )
 
