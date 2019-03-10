@@ -49,7 +49,7 @@ bash fish-theme.sh
 
 # install fonts
 mkdir ~/.fonts
-cp fonts/*ttf ~/
+cp fonts/*ttf ~/.fonts/
 find fonts/ -name "*.tar.bz2"|xargs -n 1 -I XXX tar vxf XXX -C ~/.fonts/
 ( cd ~/.fonts;fc-cache -vf )
 
