@@ -77,3 +77,14 @@ ln -s /usr/share/icons/Breeze_Default ~/.icons/breeze-cursors
 
 # enable tap as click
 sudo ln -srf 40-libinput.conf /usr/share/X11/xorg.conf.d/
+
+# install dual command
+sudo cp dual.fish /usr/local/bin/dual
+sudo chmod +x     /usr/local/bin/dual
+
+# install vim plugin
+if [ ! -d ~/.vim/myplugin ];then
+   mkdir -p ~/.vim/myplugin
+   echo 'create ~/.vim/myplugin directory!'
+fi
+cp ./vimplugins/* ~/.vim/myplugin/
