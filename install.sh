@@ -24,7 +24,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay -Syu
-yay -S breeze-default-cursor-theme paper-icon-theme ttf-monaco aosp-devel typora polybar
+yay -S breeze-default-cursor-theme paper-icon-theme ttf-monaco aosp-devel typora polybar gtypist
 
 # install a file for todo list
 cp todolist.txt ~/
