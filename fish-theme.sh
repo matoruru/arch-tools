@@ -31,3 +31,6 @@ if [[ -d ~/repositories/theme-yimmy ]]; then
 fi
 cd ~/repositories
 git clone https://github.com/oh-my-fish/theme-yimmy.git
+
+echo "   [Install gruvbox theme:]"
+fisher add jomik/fish-gruvbox
