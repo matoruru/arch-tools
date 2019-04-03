@@ -65,7 +65,10 @@ npm i -g yarn bower purescript pulp
 bash dein.sh
 mkdir -p ~/.vim/.tmp/undo   \
          ~/.vim/.tmp/backup \
-         ~/.vim/.tmp/swp
+         ~/.vim/.tmp/swp  \
+         ~/.nvim/.tmp/undo   \
+         ~/.nvim/.tmp/backup \
+         ~/.nvim/.tmp/swp
 
 # create executable file in path
 sudo cp screenshot.sh /usr/local/bin/
