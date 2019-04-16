@@ -16,7 +16,7 @@ ping www.github.com -c5 -i 0.2 || ping_failure
 
 # install packages
 sudo pacman -Syu
-sudo pacman -S fish compton xorg-xinit rofi compton xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot nvim vim git openssh jdk-openjdk adapta-gtk-theme pacman-contrib peek
+sudo pacman -S fish compton xorg-xinit rofi compton xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot nvim vim git openssh jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring
 
 # install AUR packages
 cd ~/repositories/
@@ -59,7 +59,9 @@ find fonts/ -name "*.tar.bz2"|xargs -n 1 -I XXX tar vxf XXX -C ~/.fonts/
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.nodebrew/current/bin:$PATH
 bash nodebrew.sh
-npm i -g yarn bower purescript pulp
+
+npm install -g yarn
+yarn config set prefix ~/.yarn-global
 
 # install dein
 bash dein.sh
@@ -80,6 +82,10 @@ ln -s /usr/share/icons/Breeze_Default ~/.icons/breeze-cursors
 
 # enable tap as click
 sudo ln -srf 40-libinput.conf /usr/share/X11/xorg.conf.d/
+
+# for dbus session
+sudo cp 30-dbus.sh /etc/X11/xinit/xinitrc.d/
+sudo chmod 755 /etc/X11/xinit/xinitrc.d/30-dbus.sh
 
 # install dual command
 sudo cp dual.fish /usr/local/bin/dual
