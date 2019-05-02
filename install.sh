@@ -15,16 +15,14 @@ function ping_failure {
 ping www.github.com -c5 -i 0.2 || ping_failure
 
 # install packages
-sudo pacman -Syu
-sudo pacman -S fish compton xorg-xinit rofi compton xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot nvim vim git openssh jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring
+sudo pacman -Syu compton xorg-xinit rofi compton xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot nvim vim git openssh jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring lsof expect wmname imagemagick
 
 # install AUR packages
 cd ~/repositories/
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-yay -Syu
-yay -S breeze-default-cursor-theme paper-icon-theme ttf-monaco aosp-devel typora polybar gtypist
+yay -Syu breeze-default-cursor-theme paper-icon-theme ttf-monaco aosp-devel typora polybar gtypist
 
 # install a file for todo list
 cp todolist.txt ~/
@@ -40,9 +38,9 @@ cp todolist.txt ~/
 cp -r Pictures ~/
 sudo cp setwp.sh /usr/local/bin/setwp
 sudo chmod +x /usr/local/bin/setwp
-curl -o ~/Pictures/gentoo-1920x1080.jpg https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
-mkdir -p ~/Pictures/wallpaper
-ln -srf ~/Pictures/gentoo-1920x1080.jpg ~/Pictures/wallpaper/main.jpg
+curl -o ~/Pictures/gentoo-1920x1080.jpg https://www.gentoo.org/assets/img/wallpapers/gentoo-10/purple/1920x1080.jpg
+mkdir -p ~/Pictures/wallpapers
+ln -srf ~/Pictures/gentoo-1920x1080.jpg ~/Pictures/wallpapers/main.jpg
 
 # install fish theme (yimmy)
 bash fish-theme.sh
