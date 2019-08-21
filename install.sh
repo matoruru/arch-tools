@@ -15,14 +15,14 @@ function ping_failure {
 ping www.github.com -c5 -i 0.2 || ping_failure
 
 # install packages
-sudo pacman -Syu compton xorg-xinit rofi compton xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot nvim vim git openssh jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring lsof expect wmname imagemagick arandr
+sudo pacman -Syu compton xorg-xinit rofi compton xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput intellij-idea-community-edition code stack chromium pinta rxvt-unicode xmonad-contrib scrot git openssh jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring lsof expect wmname imagemagick arandr xclip
 
 # install AUR packages
 cd ~/repositories/
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-yay -Syu breeze-default-cursor-theme paper-icon-theme ttf-monaco aosp-devel typora polybar gtypist
+yay -Syu breeze-default-cursor-theme paper-icon-theme ttf-monaco aosp-devel typora polybar gtypist neovim-nightly
 
 # install a file for todo list
 cp todolist.txt ~/
@@ -61,14 +61,9 @@ bash nodebrew.sh
 npm install -g yarn
 yarn config set prefix ~/.yarn-global
 
-# install dein
-bash dein.sh
-mkdir -p ~/.vim/.tmp/undo   \
-         ~/.vim/.tmp/backup \
-         ~/.vim/.tmp/swp  \
-         ~/.nvim/.tmp/undo   \
-         ~/.nvim/.tmp/backup \
-         ~/.nvim/.tmp/swp
+# install Plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # create executable file in path
 sudo cp screenshot.sh /usr/local/bin/

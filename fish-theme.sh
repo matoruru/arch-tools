@@ -24,13 +24,9 @@ else
    curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fi
 
-echo "   [Install yimmy theme:]"
-if [[ -d ~/repositories/theme-yimmy ]]; then
-   echo timmy is installed already!
-   exit
-fi
-cd ~/repositories
-git clone https://github.com/oh-my-fish/theme-yimmy.git
+echo "   [Install simple-ass-prompt theme:]"
+fisher add lfiolhais/theme-simple-ass-prompt
 
-echo "   [Install gruvbox theme:]"
-fisher add jomik/fish-gruvbox
+echo "   [Install git utils:]"
+fisher add fishpkg/fish-git-util
+
