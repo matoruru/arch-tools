@@ -25,8 +25,8 @@ else
 fi
 
 echo "   [Install simple-ass-prompt theme:]"
-fisher add lfiolhais/theme-simple-ass-prompt
+fish -c "fisher add lfiolhais/theme-simple-ass-prompt"
 
 echo "   [Install git utils:]"
-fisher add fishpkg/fish-git-util
+fish -c "fisher add fishpkg/fish-git-util"
 
