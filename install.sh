@@ -12,35 +12,26 @@ function ping_failure {
    exit
 }
 
-ping www.github.com -c5 -i 0.2 || ping_failure
+ping www.google.com -c5 -i 0.2 || ping_failure
 
 # install packages
 sudo pacman -Syu compton xorg-xinit rofi compton xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput code stack chromium pinta rxvt-unicode xmonad-contrib scrot git openssh jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring lsof expect wmname imagemagick arandr xclip
 
 # install AUR packages
-cd ~/repositories/
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-yay -Syu breeze-default-cursor-theme paper-icon-theme ttf-monaco typora polybar gtypist neovim-nightly
+(
+  cd ~/repositories/
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si
+  yay -Syu breeze-default-cursor-theme paper-icon-theme ttf-monaco typora polybar gtypist neovim-nightly
+)
 
 # install a file for todo list
 cp todolist.txt ~/
 
-# install dic
-(
-   cd ~/repositories/matoruru
-   git clone git@github.com:matoruru/dic.git
-   cd dic;bash install.sh
-)
-
 # copy Picture to ~/ and set wallpaper
 cp -r Pictures ~/
-sudo cp setwp.sh /usr/local/bin/setwp
-sudo chmod +x /usr/local/bin/setwp
-curl -o ~/Pictures/gentoo-1920x1080.jpg https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
-mkdir -p ~/Pictures/wallpapers
-ln -srf ~/Pictures/gentoo-1920x1080.jpg ~/Pictures/wallpapers/main.jpg
+curl -o ~/1.jpg https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
 
 # install fish theme (yimmy)
 bash fish-theme.sh
@@ -59,7 +50,10 @@ export PATH=~/.nodebrew/current/bin:$PATH
 bash nodebrew.sh
 
 npm install -g yarn
+export PATH=~/.yarn-global/bin:$PATH
 yarn config set prefix ~/.yarn-global
+
+yarn global add spago purescript purescript-language-server
 
 # install Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -79,14 +73,3 @@ sudo ln -srf 40-libinput.conf /usr/share/X11/xorg.conf.d/
 # for dbus session
 sudo cp 30-dbus.sh /etc/X11/xinit/xinitrc.d/
 sudo chmod 755 /etc/X11/xinit/xinitrc.d/30-dbus.sh
-
-# install dual command
-sudo cp dual.fish /usr/local/bin/dual
-sudo chmod +x     /usr/local/bin/dual
-
-# install vim plugin
-if [ ! -d ~/.vim/myplugin ];then
-   mkdir -p ~/.vim/myplugin
-   echo 'create ~/.vim/myplugin directory!'
-fi
-cp ./vimplugins/* ~/.vim/myplugin/
