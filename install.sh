@@ -31,7 +31,8 @@ cp todolist.txt ~/
 
 # copy Picture to ~/ and set wallpaper
 cp -r Pictures ~/
-curl -o ~/1.jpg https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
+mkdir   ~/.wallpapers
+curl -o ~/.wallpapers/1.jpg https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
 
 # install fish theme (yimmy)
 bash fish-theme.sh
