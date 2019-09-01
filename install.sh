@@ -15,7 +15,7 @@ function ping_failure {
 ping www.google.com -c5 -i 0.2 || ping_failure
 
 # install packages
-sudo pacman -Syu compton xorg-xinit rofi compton xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput code stack chromium pinta rxvt-unicode xmonad-contrib scrot git openssh jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring lsof expect wmname imagemagick arandr xclip
+sudo pacman -Syyuq --noconfirm compton xorg-xinit rofi xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput code stack chromium pinta rxvt-unicode xmonad-contrib scrot jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring lsof expect wmname imagemagick arandr xclip
 
 # install AUR packages
 (
@@ -23,7 +23,7 @@ sudo pacman -Syu compton xorg-xinit rofi compton xorg-server xf86-video-intel xo
   git clone https://aur.archlinux.org/yay.git
   cd yay
   makepkg -si
-  yay -Syu breeze-default-cursor-theme paper-icon-theme ttf-monaco typora polybar gtypist neovim-nightly
+  yay -Syyuq --noconfirm breeze-default-cursor-theme paper-icon-theme ttf-monaco typora polybar neovim-nightly
 )
 
 # install a file for todo list
