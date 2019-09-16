@@ -74,3 +74,5 @@ sudo ln -srf 40-libinput.conf /usr/share/X11/xorg.conf.d/
 # for dbus session
 sudo cp 30-dbus.sh /etc/X11/xinit/xinitrc.d/
 sudo chmod 755 /etc/X11/xinit/xinitrc.d/30-dbus.sh
+
+sudo reboot
