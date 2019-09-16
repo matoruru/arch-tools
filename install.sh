@@ -22,7 +22,7 @@ sudo pacman -Syyuq --noconfirm compton xorg-xinit rofi xorg-server xf86-video-in
   cd ~/repositories/
   git clone https://aur.archlinux.org/yay.git
   cd yay
-  makepkg -si
+  makepkg -si --noconfirm
   yay -Syyuq --noconfirm breeze-default-cursor-theme paper-icon-theme ttf-monaco typora polybar neovim-nightly
 )
 
