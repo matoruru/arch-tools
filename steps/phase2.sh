@@ -20,4 +20,4 @@ bash <(curl -s $BASEURL/12.sh ) $USERNAME $USERPASSWORD
 bash <(curl -s $BASEURL/13.sh )
 bash <(curl -s $BASEURL/14.sh )
 
-bash <(curl -s https://raw.githubusercontent.com/matoruru/dotfiles/master/install.sh)
+sudo -u $USERNAME bash <(curl -s https://raw.githubusercontent.com/matoruru/dotfiles/master/install.sh)
