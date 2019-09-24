@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-mkfs.vfat -F32 /dev/sda1
-mkfs.xfs  -f   /dev/sda2
+PARTSIZE=$1
 
-mount /dev/sda2 /mnt
-
-mkdir           /mnt/boot
-mount /dev/sda1 /mnt/boot
+sgdisk -d 1                                              /dev/sda
+sgdisk -d 2                                              /dev/sda
+sgdisk -n 1::+128M     -c 1:"EFI System"       -t 1:EF00 /dev/sda
+sgdisk -n 2::$PARTSIZE -c 2:"Linux filesystem" -t 2:8300 /dev/sda

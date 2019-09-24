@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-timedatectl set-ntp true
+mkfs.vfat -F32 /dev/sda1
+mkfs.xfs  -f   /dev/sda2
+
+mount /dev/sda2 /mnt
+
+mkdir           /mnt/boot
+mount /dev/sda1 /mnt/boot
