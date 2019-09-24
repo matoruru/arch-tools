@@ -61,6 +61,9 @@ yarn config set prefix ~/.yarn-global
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# Install Vim plugins
+nvim -c :PlugInstall -c :q -c :q
+
 # create executable file in path
 sudo cp screenshot.sh /usr/local/bin/
 sudo chmod +x /usr/local/bin/screenshot.sh
