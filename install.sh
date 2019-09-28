@@ -80,6 +80,6 @@ sudo cp 30-dbus.sh /etc/X11/xinit/xinitrc.d/
 sudo chmod 755 /etc/X11/xinit/xinitrc.d/30-dbus.sh
 
 # for base16-shell(matoruru)
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+git clone https://github.com/matoruru/base16-shell.git ~/.config/base16-shell
 
 sudo reboot
