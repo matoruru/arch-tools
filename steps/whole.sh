@@ -12,7 +12,7 @@ USERPASSWORD=$6
   echo "You need to input 6 arguments!";
   echo "
   EXAMPLE:
-   $ bash <(curl -s https://raw.githubusercontent.com/matoruru/arch-tools/master/steps/whole.sh) +60G howtname wlp2s0 rootpasswd myusername myuserpasswd
+   $ bash <(curl -s https://raw.githubusercontent.com/matoruru/arch-tools/master/steps/whole.sh) +60G hostname wlp2s0 rootpasswd myusername myuserpasswd
   "
   exit;
 }
