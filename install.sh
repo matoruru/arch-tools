@@ -79,6 +79,6 @@ sudo ln -srf 40-libinput.conf /usr/share/X11/xorg.conf.d/
 sudo cp 30-dbus.sh /etc/X11/xinit/xinitrc.d/
 sudo chmod 755 /etc/X11/xinit/xinitrc.d/30-dbus.sh
 
-# for base16-shell(matoruru)
-git clone https://github.com/matoruru/base16-shell.git ~/.config/base16-shell
-( base16-solarized-dark )
+# for base16-shell
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+fish -c "source ~/.config/base16-shell/profile_helper.fish; base16-solarized-dark"

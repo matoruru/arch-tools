@@ -8,7 +8,14 @@ USERNAME=$5
 USERPASSWORD=$6
 
 # check if 6 args exists
-[ -z "$6" ] && { echo "You need to input 6 arguments!"; exit; }
+[ -z "$6" ] && {
+  echo "You need to input 6 arguments!";
+  echo "
+  EXAMPLE:
+   $ bash <(curl -s https://raw.githubusercontent.com/matoruru/arch-tools/master/steps/whole.sh) +60G howtname wlp2s0 rootpasswd myusername myuserpasswd
+  "
+  exit;
+}
 
 # check a connection to internet
 ping www.google.com -i 0.2 -c 5 || { echo "Connection is not established..."; exit; }
