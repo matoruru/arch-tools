@@ -13,7 +13,9 @@ USERPASSWORD=$6
 # check a connection to internet
 ping www.google.com -i 0.2 -c 5 || { echo "Connection is not established..."; exit; }
 
-bash phase1.sh $PARTSIZE
-arch-chroot /mnt bash -c "bash phase2.sh $HOSTNAME $INTERFACE $ROOTPASSWORD $USERNAME $USERPASSWORD"
+BASEURL="https://raw.githubusercontent.com/matoruru/arch-tools/master/steps"
+
+bash <(curl -s $BASEURL/phase1.sh) $PARTSIZE
+arch-chroot /mnt bash -c "bash <(curl -s $BASEURL/phase2.sh) $HOSTNAME $INTERFACE $ROOTPASSWORD $USERNAME $USERPASSWORD"
 
 reboot
