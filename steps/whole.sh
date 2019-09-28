@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+PARTSIZE=$1
+HOSTNAME=$2
+INTERFACE=$3
+ROOTPASSWORD=$4
+USERNAME=$5
+USERPASSWORD=$6
+
+phase1.sh $PARTSIZE
+arch-chroot /mnt bash -c "phase2.sh $HOSTNAME $INTERFACE $ROOTPASSWORD $USERNAME $USERPASSWORD"
+
+reboot

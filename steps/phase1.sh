@@ -10,5 +10,3 @@ bash <(curl -s $BASEURL/4.sh)
 bash <(curl -s $BASEURL/5.sh)
 bash <(curl -s $BASEURL/6.sh)
 bash <(curl -s $BASEURL/7.sh)
-
-arch-chroot /mnt

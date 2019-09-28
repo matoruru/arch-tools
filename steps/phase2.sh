@@ -12,12 +12,14 @@ bash <(curl -s $BASEURL/8.sh  )
 bash <(curl -s $BASEURL/9.sh  ) $HOSTNAME
 bash <(curl -s $BASEURL/10.sh )
 bash <(curl -s $BASEURL/11.sh ) $INTERFACE
-bash <(curl -s $BASEURL/11b.sh)
 
 echo "root:$ROOTPASSWORD" | chpasswd
 
 bash <(curl -s $BASEURL/12.sh ) $USERNAME $USERPASSWORD
 bash <(curl -s $BASEURL/13.sh )
-bash <(curl -s $BASEURL/14.sh )
+
+echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 sudo -u $USERNAME bash -c "bash <(curl -s https://raw.githubusercontent.com/matoruru/dotfiles/master/install.sh)"
+
+sed -ie '$d' /etc/sudoers
