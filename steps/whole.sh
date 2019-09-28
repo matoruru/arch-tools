@@ -7,7 +7,7 @@ ROOTPASSWORD=$4
 USERNAME=$5
 USERPASSWORD=$6
 
-phase1.sh $PARTSIZE
-arch-chroot /mnt bash -c "phase2.sh $HOSTNAME $INTERFACE $ROOTPASSWORD $USERNAME $USERPASSWORD"
+bash phase1.sh $PARTSIZE
+arch-chroot /mnt bash -c "bash phase2.sh $HOSTNAME $INTERFACE $ROOTPASSWORD $USERNAME $USERPASSWORD"
 
 reboot
