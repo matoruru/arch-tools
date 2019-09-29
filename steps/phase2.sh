@@ -18,8 +18,8 @@ echo "root:$ROOTPASSWORD" | chpasswd
 bash <(curl -s $BASEURL/12.sh ) $USERNAME $USERPASSWORD
 bash <(curl -s $BASEURL/13.sh )
 
-sed -ie '$a %wheel ALL=(ALL) NOPASSWD: ALL' /etc/sudoers
+sed -ie 's/#\ %wheel\ ALL=(ALL)\ NOPASSWD:\ ALL/%wheel\ ALL=(ALL)\ NOPASSWD:\ ALL/' /etc/sudoers
 
 sudo -u $USERNAME bash -c "bash <(curl -s https://raw.githubusercontent.com/matoruru/dotfiles/master/install.sh)"
 
-sed -ie '$d' /etc/sudoers
+sed -ie 's/%wheel\ ALL=(ALL)\ NOPASSWD:\ ALL/#\ %wheel\ ALL=(ALL)\ NOPASSWD:\ ALL/' /etc/sudoers
