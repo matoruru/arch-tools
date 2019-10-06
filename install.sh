@@ -54,8 +54,9 @@ npm install -g yarn
 export PATH=~/.yarn-global/bin:$PATH
 yarn config set prefix ~/.yarn-global
 
-# I don't know why but it does not work...
-# yarn global add spago purescript purescript-language-server
+# Install purescript
+yarn global add spago
+yarn global add purescript purescript-language-server
 
 # install Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
