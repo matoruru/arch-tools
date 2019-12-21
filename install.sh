@@ -56,7 +56,7 @@ yarn config set prefix ~/.yarn-global
 
 # Install purescript
 yarn global add spago
-yarn global add purescript purescript-language-server
+# yarn global add purescript purescript-language-server
 
 # install Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
