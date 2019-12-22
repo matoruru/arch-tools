@@ -44,4 +44,7 @@ arch-chroot /mnt bash -c "sudo -u $USERNAME bash -c \"cd; $USERSCRIPT\""
 
 arch-chroot /mnt bash -c "sed -ie 's/#\ %wheel\ ALL=(ALL)\ NOPASSWD:\ ALL/%wheel\ ALL=(ALL)\ NOPASSWD:\ ALL/' /etc/sudoers"
 
+# Execute a script as a user
+arch-chroot /mnt bash -c "sudo -u $USERNAME bash -c \"bash <(curl -s $BASEURL/phase3.sh)\""
+
 reboot
