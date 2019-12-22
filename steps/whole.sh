@@ -42,4 +42,6 @@ arch-chroot /mnt bash -c "cd; $ROOTSCRIPT"
 # Execute a script($USERSCRIPT) as a user after base install, start at ~/
 arch-chroot /mnt bash -c "sudo -u $USERNAME bash -c \"cd; $USERSCRIPT\""
 
+sed -ie 's/#\ %wheel\ ALL=(ALL)\ NOPASSWD:\ ALL/%wheel\ ALL=(ALL)\ NOPASSWD:\ ALL/' /etc/sudoers
+
 reboot
