@@ -15,7 +15,7 @@ function ping_failure {
 ping www.google.com -c5 -i 0.2 || ping_failure
 
 # install packages
-sudo pacman -Syyuq --noconfirm compton xorg-xinit rofi xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput code stack chromium pinta rxvt-unicode xmonad-contrib scrot jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring lsof expect wmname imagemagick arandr xclip man-db man-pages dhcpcd
+sudo pacman -Syyuq --noconfirm compton xorg-xinit rofi xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc gimp nautilus alsa-utils ttf-fira-code libreoffice lua ruby libinput xf86-input-libinput code stack chromium pinta rxvt-unicode xmonad-contrib scrot jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring lsof expect wmname imagemagick arandr xclip man-db man-pages
 # install AUR packages
 (
   cd ~/repositories/
