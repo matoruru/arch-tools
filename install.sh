@@ -54,8 +54,12 @@ export PATH=~/.yarn-global/bin:$PATH
 yarn config set prefix ~/.yarn-global
 
 # Install purescript
-yarn global add spago
-# yarn global add purescript purescript-language-server
+(
+  yarn global add spago
+  npm install -g purescript
+  npm install -g pulp bower
+  npm install -g purescript-language-server
+)
 
 # install Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
