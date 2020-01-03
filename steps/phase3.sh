@@ -6,6 +6,7 @@ rm -rf ~/.ssh ~/.config/chromium
 
 cp -r /backup/chromium ~/.config/
 cp -r /backup/.ssh ~/
+cp /backup/.gitconfig ~/
 sudo cp /backup/netctl/* /etc/netctl/
 
 sudo umount /backup
