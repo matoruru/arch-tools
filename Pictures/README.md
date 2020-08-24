@@ -2,7 +2,7 @@
 
 I used these tools for images.
 
-- imageenlarger (for resizing)
+- SmillaEnlarger (for resizing)
 - inkspace (for conversion from png to svg)
 - [svgomg](https://jakearchibald.github.io/svgomg/) (for minify svg)
 - [https://tinypng.com/](https://tinypng.com/)
