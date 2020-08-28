@@ -8,13 +8,13 @@
   <path fill="#fda800" d="M0 0h400v400H0z" clip-path="url(#a)" transform="translate(-71 -71)"/>
   <path fill="#00fda4" d="M153 50c14-21 42-17 52-1-13 24-46 15-52 1z"/>
   <path fill="#fec" d="M88 112l-2-3 14-27 11 19h37l11-19 14 27-2 3 31 95H57z"/>
-  <path fill="none" stroke="#000" stroke-width="3" d="M129 101c0-26-1-48 24-51m0 0c12 18 39 19 52-1-14-18-38-18-52 1z"/>
-  <path fill="none" stroke="#000" stroke-width="3" d="M163 41l6 9-6 9"/>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="3" d="M57 207l31-95-2-3 14-27 11 19m91 106l-31-95 2-3-14-27-11 19"/>
-  <path fill="none" stroke="#000" stroke-width="3" d="M170 37l18 26m-17 0l8-13"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="3" d="M188 52h14m-18-6h17"/>
-  <circle cx="142.7" cy="137" r="2.4" stroke="#000"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="3" d="M150 154a21 22 0 01-21 21 21 22 0 01-21-21"/>
-  <circle cx="115.3" cy="137" r="2.4" stroke="#000"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="3" d="M57 207h145m-91-106h37"/>
+  <path fill="none" stroke="#000" stroke-width="4" d="M129 101c0-26-1-48 24-51m0 0c12 18 39 19 52-1-14-18-38-18-52 1z"/>
+  <path fill="none" stroke="#000" stroke-width="4" d="M163 41l6 9-6 9"/>
+  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="4" d="M57 207l31-95-2-3 14-27 11 19m91 106l-31-95 2-3-14-27-11 19"/>
+  <path fill="none" stroke="#000" stroke-width="4" d="M170 37l18 26m-17 0l8-13"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="4" d="M188 52h14m-18-6h17"/>
+  <circle cx="142.7" cy="137" r="2.4" stroke="#000" stroke-width="2"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="4" d="M150 154a21 22 0 01-21 21 21 22 0 01-21-21"/>
+  <circle cx="115.3" cy="137" r="2.4" stroke="#000" stroke-width="2"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="4" d="M57 207h145m-91-106h37"/>
 </svg>
