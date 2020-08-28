@@ -6,9 +6,9 @@
   <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="4" d="M227 158c4 10 4 23 12 31m-30-9c6-7 10-16 18-22m-60 3c6 5 7 13 11 19m-26 8c5-9 8-19 14-27m-12 30l-2-3m-29 98c10-32 22-63 31-95m85-2c11 34 21 65 37 97m-101-39c14 19 42 6 52-10"/>
   <path fill="none" stroke="#000" stroke-width="3" d="M193 180c0-9-1-53 20-53m0 0c22 19 42 22 56 1-18-20-33-16-56-1z"/>
   <path stroke="#000" stroke-width="4" d="M178 180h31m-86 106h153"/>
-  <path stroke="#000" stroke-width="3" d="M234 115l19 27m-11-15l-8 13"/>
   <circle cx="184" cy="216" r="2.4" stroke="#000"/>
   <circle cx="210" cy="216" r="2.4" stroke="#000"/>
+  <path stroke="#000" stroke-width="3" d="M234 115l19 27m-11-15l-8 13"/>
   <path fill="none" stroke="#000" stroke-width="3" d="M225 119l6 9-6 9"/>
   <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="3" d="M246 124h18M251 130h16"/>
 </svg>
