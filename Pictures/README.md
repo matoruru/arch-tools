@@ -11,5 +11,5 @@ I used these tools for images.
 
 | Where | File name |
 |---|---|
-| GitHub | matoruru-460x460.png |
+| GitHub | matoruru-500x500.png |
 | Twitter | matoruru-400x400.png |
