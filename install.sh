@@ -22,7 +22,7 @@ sudo pacman -Syyuq --noconfirm neovim compton xorg-xinit rofi xorg-server xf86-v
   git clone https://aur.archlinux.org/yay.git
   cd yay
   makepkg -si --noconfirm
-  yay -Syyuq --noconfirm breeze-default-cursor-theme paper-icon-theme ttf-monaco typora polybar ncurses5-compat-libs
+  yay -Syyuq --noconfirm breeze-default-cursor-theme paper-icon-theme ttf-monaco polybar
 )
 
 # install a file for todo list
