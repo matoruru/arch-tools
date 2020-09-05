@@ -25,9 +25,6 @@ sudo pacman -Syyuq --noconfirm neovim compton xorg-xinit rofi xorg-server xf86-v
   yay -Syyuq --noconfirm breeze-default-cursor-theme paper-icon-theme ttf-monaco polybar
 )
 
-# install a file for todo list
-cp todolist.txt ~/
-
 # copy Picture to ~/ and set wallpaper
 cp -r Pictures ~/
 mkdir   ~/.wallpapers
