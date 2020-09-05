@@ -103,7 +103,7 @@ bash nodebrew.sh
 # Install purescript
 yarn global add \
   spago \
-  purescript \
+#  purescript \
   pulp \
   bower \
   purescript-language-server
