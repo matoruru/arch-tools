@@ -80,7 +80,7 @@ sudo pacman -Syyuq --noconfirm \
     breeze-default-cursor-theme \
     paper-icon-theme \
     ttf-monaco \
-    nerd-fonts-complete \
+    nerd-fonts-iosevka \
     polybar
 )
 
