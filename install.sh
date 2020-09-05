@@ -66,6 +66,7 @@ sudo pacman -Syyuq --noconfirm \
   libmtp \
   gvfs-mtp \
   asunder \
+  noto-fonts-cjk \
   yarn
 
 # install AUR packages
