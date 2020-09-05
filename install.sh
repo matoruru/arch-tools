@@ -17,7 +17,7 @@ ping www.google.com -c5 -i 0.2 || ping_failure
 # install packages
 sudo pacman -Syyuq --noconfirm \
   neovim \
-  compton \
+  picom \
   xorg-xinit \
   rofi \
   xorg-server \
