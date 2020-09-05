@@ -10,7 +10,7 @@ ROOTSCRIPT=$7
 USERSCRIPT=$8
 
 # check if 8 args exists
-[ -z "$6" ] && {
+[ -z "$8" ] && {
   echo "You need to input 8 arguments!";
   echo "
   EXAMPLE 1:
