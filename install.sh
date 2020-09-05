@@ -89,12 +89,6 @@ curl -o ~/.wallpapers/1.jpg https://www.gentoo.org/assets/img/wallpaper/gentoo-1
 # install fish theme (yimmy)
 bash fish-theme.sh
 
-# install fonts
-mkdir ~/.fonts
-cp fonts/*ttf ~/.fonts/
-find fonts/ -name "*.tar.bz2"|xargs -n 1 -I XXX tar vxf XXX -C ~/.fonts/
-( cd ~/.fonts;fc-cache -vf )
-
 # npm
 export PATH=~/.npm-global/bin:$PATH
 
