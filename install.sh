@@ -67,6 +67,7 @@ sudo pacman -Syyuq --noconfirm \
   gvfs-mtp \
   asunder \
   noto-fonts-cjk \
+  ttf-fantasque-sans-mono \
   yarn
 
 # install AUR packages
@@ -79,6 +80,7 @@ sudo pacman -Syyuq --noconfirm \
     breeze-default-cursor-theme \
     paper-icon-theme \
     ttf-monaco \
+    nerd-fonts-complete \
     polybar
 )
 
