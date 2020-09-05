@@ -20,10 +20,10 @@ USERSCRIPT=$8
    $ bash <(curl -s https://raw.githubusercontent.com/matoruru/arch-tools/master/steps/whole.sh) +60G hostname wlp2s0 rootpasswd myusername myuserpasswd \"echo \\\"I am root.\\\";\" \"echo \\\"I am\\\"; echo \\\"the new user.\\\";\"
 
   EXAMPLE 3:
-   $ bash <(curl -s https://raw.githubusercontent.com/matoruru/arch-tools/master/steps/whole.sh) +60G hostname wlp2s0 rootpasswd myusername myuserpasswd \"\$(cat file.sh)\" \"\"
+   $ bash <(curl -s https://raw.githubusercontent.com/matoruru/arch-tools/master/steps/whole.sh) +60G hostname wlp2s0 rootpasswd myusername myuserpasswd \"\$(cat file.sh)\" \" \"
 
   EXAMPLE 2:
-   $ bash <(curl -s https://raw.githubusercontent.com/matoruru/arch-tools/master/steps/whole.sh) +60G hostname wlp2s0 rootpasswd myusername myuserpasswd \"\" \"\"
+   $ bash <(curl -s https://raw.githubusercontent.com/matoruru/arch-tools/master/steps/whole.sh) +60G hostname wlp2s0 rootpasswd myusername myuserpasswd \" \" \" \"
   "
   exit;
 }
