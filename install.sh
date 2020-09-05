@@ -68,6 +68,7 @@ sudo pacman -Syyuq --noconfirm \
   asunder \
   noto-fonts-cjk \
   ttf-fantasque-sans-mono \
+  noto-fonts-emoji \
   yarn
 
 # install AUR packages
