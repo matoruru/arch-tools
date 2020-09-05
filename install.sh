@@ -36,6 +36,9 @@ sudo pacman -Syyuq --noconfirm \
   nautilus \
   alsa-utils \
   ttf-fira-code \
+  noto-fonts-cjk \
+  ttf-fantasque-sans-mono \
+  noto-fonts-emoji \
   lua \
   ruby \
   libinput \
@@ -66,9 +69,6 @@ sudo pacman -Syyuq --noconfirm \
   libmtp \
   gvfs-mtp \
   asunder \
-  noto-fonts-cjk \
-  ttf-fantasque-sans-mono \
-  noto-fonts-emoji \
   yarn
 
 # install AUR packages
