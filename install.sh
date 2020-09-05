@@ -15,14 +15,70 @@ function ping_failure {
 ping www.google.com -c5 -i 0.2 || ping_failure
 
 # install packages
-sudo pacman -Syyuq --noconfirm neovim compton xorg-xinit rofi xorg-server xf86-video-intel xorg-apps neofetch tree feh htop fish kitty time fcitx-im fcitx-configtool fcitx-mozc nautilus alsa-utils ttf-fira-code lua ruby libinput xf86-input-libinput code stack chromium rxvt-unicode xmonad-contrib scrot jdk-openjdk adapta-gtk-theme pacman-contrib peek gnome-keyring lsof expect wmname imagemagick arandr xclip man-db man-pages whois httpie zip unzip libmtp gvfs-mtp asunder
+sudo pacman -Syyuq --noconfirm \
+  neovim \
+  compton \
+  xorg-xinit \
+  rofi \
+  xorg-server \
+  xf86-video-intel \
+  xorg-apps \
+  neofetch \
+  tree \
+  feh \
+  htop \
+  fish \
+  kitty \
+  time \
+  fcitx-im \
+  fcitx-configtool \
+  fcitx-mozc \
+  nautilus \
+  alsa-utils \
+  ttf-fira-code \
+  lua \
+  ruby \
+  libinput \
+  xf86-input-libinput \
+  code \
+  stack \
+  chromium \
+  rxvt-unicode \
+  xmonad-contrib \
+  scrot \
+  jdk-openjdk \
+  adapta-gtk-theme \
+  pacman-contrib \
+  peek \
+  gnome-keyring \
+  lsof \
+  expect \
+  wmname \
+  imagemagick \
+  arandr \
+  xclip \
+  man-db \
+  man-pages \
+  whois \
+  httpie \
+  zip \
+  unzip \
+  libmtp \
+  gvfs-mtp \
+  asunder \
+  yarn
+
 # install AUR packages
 (
   cd ~/repositories/
   git clone https://aur.archlinux.org/yay.git
   cd yay
   makepkg -si --noconfirm
-  yay -Syyuq --noconfirm breeze-default-cursor-theme paper-icon-theme ttf-monaco polybar
+  yay -Syyuq --noconfirm \
+    breeze-default-cursor-theme \
+    paper-icon-theme \
+    ttf-monaco \
+    polybar
 )
 
 # copy Picture to ~/ and set wallpaper
@@ -39,23 +95,24 @@ cp fonts/*ttf ~/.fonts/
 find fonts/ -name "*.tar.bz2"|xargs -n 1 -I XXX tar vxf XXX -C ~/.fonts/
 ( cd ~/.fonts;fc-cache -vf )
 
-# set environment variables for nodejs,
-# install nodebrew, the Node.js version manager without sudo
-# and intall tools related to purescript
+# npm
 export PATH=~/.npm-global/bin:$PATH
-export PATH=~/.nodebrew/current/bin:$PATH
-bash nodebrew.sh
 
-npm install -g yarn
+# yarn
 export PATH=~/.yarn-global/bin:$PATH
 yarn config set prefix ~/.yarn-global
 
-# Install purescript
+# nodebrew
+export PATH=~/.nodebrew/current/bin:$PATH
+bash nodebrew.sh
 
-yarn global add spago
-npm install -g purescript
-npm install -g pulp bower
-npm install -g purescript-language-server
+# Install purescript
+yarn global add \
+  spago \
+  purescript \
+  pulp \
+  bower \
+  purescript-language-server
 
 # install Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
