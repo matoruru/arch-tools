@@ -69,6 +69,7 @@ sudo pacman -Syyuq --noconfirm \
   libmtp \
   gvfs-mtp \
   asunder \
+  docker \
   yarn
 
 # install AUR packages
@@ -84,6 +85,9 @@ sudo pacman -Syyuq --noconfirm \
     nerd-fonts-iosevka \
     polybar
 )
+
+# enable docker daemon
+sudo systemctl enable docker
 
 # copy Picture to ~/ and set wallpaper
 cp -r Pictures ~/
