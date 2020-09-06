@@ -114,7 +114,7 @@ yarn global add \
   pulp \
   bower \
   purescript-language-server
-yarn global add purescript
+# yarn global add purescript
 
 # install Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
