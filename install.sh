@@ -70,6 +70,7 @@ sudo pacman -Syyuq --noconfirm \
   gvfs-mtp \
   asunder \
   docker \
+  inkscape \
   yarn
 
 # install AUR packages
