@@ -33,6 +33,7 @@ sudo pacman -Syyuq --noconfirm \
   fcitx-im \
   fcitx-configtool \
   fcitx-mozc \
+  papirus-icon-theme \
   nautilus \
   alsa-utils \
   ttf-fira-code \
@@ -81,7 +82,6 @@ sudo pacman -Syyuq --noconfirm \
   makepkg -si --noconfirm
   yay -Syyuq --noconfirm \
     breeze-default-cursor-theme \
-    paper-icon-theme \
     ttf-monaco \
     nerd-fonts-iosevka \
     ttf-symbola \
