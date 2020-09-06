@@ -83,6 +83,7 @@ sudo pacman -Syyuq --noconfirm \
     paper-icon-theme \
     ttf-monaco \
     nerd-fonts-iosevka \
+    ttf-symbola \
     polybar
 )
 
