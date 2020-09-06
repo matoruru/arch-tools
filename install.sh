@@ -87,6 +87,7 @@ sudo pacman -Syyuq --noconfirm \
 )
 
 # enable docker daemon
+sudo usermod -aG docker $(whoami)
 sudo systemctl enable docker
 
 # copy Picture to ~/ and set wallpaper
