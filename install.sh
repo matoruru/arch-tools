@@ -107,10 +107,10 @@ bash nodebrew.sh
 # Install purescript
 yarn global add \
   spago \
-#  purescript \
   pulp \
   bower \
   purescript-language-server
+yarn global add purescript
 
 # install Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
