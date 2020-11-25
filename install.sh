@@ -85,6 +85,7 @@ sudo pacman -Syyuq --noconfirm \
     ttf-monaco \
     nerd-fonts-iosevka \
     ttf-symbola \
+    haskell-language-server-bin \
     polybar
 )
 
