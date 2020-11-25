@@ -44,7 +44,6 @@ sudo pacman -Syyuq --noconfirm \
   ruby \
   libinput \
   xf86-input-libinput \
-  code \
   stack \
   chromium \
   rxvt-unicode \
