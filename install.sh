@@ -88,6 +88,14 @@ sudo pacman -Syyuq --noconfirm \
     polybar
 )
 
+# see:
+# - https://aur.archlinux.org/packages/ncurses5-compat-libs/
+# - https://github.com/purescript/documentation/issues/119
+if [[ ! -f "/usr/lib/libtinfo.so.5" ]]; then
+  echo "\"/usr/lib/libtinfo.so.5\" doesn't exist."
+  sudo ln -s /usr/lib/libtinfo.so.{6,5}
+fi
+
 # enable docker daemon
 sudo usermod -aG docker $(whoami)
 sudo systemctl enable docker
@@ -113,11 +121,11 @@ bash nodebrew.sh
 
 # Install purescript
 yarn global add \
+  purescript \
   spago \
+  purescript-language-server \
   pulp \
-  bower \
-  purescript-language-server
-# yarn global add purescript
+  bower
 
 # install Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
