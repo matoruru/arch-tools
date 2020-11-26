@@ -14,65 +14,6 @@ function ping_failure {
 
 ping www.google.com -c5 -i 0.2 || ping_failure
 
-# install packages
-sudo pacman -Syyuq --noconfirm \
-  neovim \
-  picom \
-  xorg-xinit \
-  rofi \
-  xorg-server \
-  xf86-video-intel \
-  xorg-apps \
-  neofetch \
-  tree \
-  feh \
-  htop \
-  fish \
-  kitty \
-  time \
-  fcitx-im \
-  fcitx-configtool \
-  fcitx-mozc \
-  papirus-icon-theme \
-  nautilus \
-  alsa-utils \
-  ttf-fira-code \
-  noto-fonts-cjk \
-  ttf-fantasque-sans-mono \
-  noto-fonts-emoji \
-  lua \
-  ruby \
-  libinput \
-  xf86-input-libinput \
-  stack \
-  chromium \
-  rxvt-unicode \
-  xmonad-contrib \
-  scrot \
-  jdk-openjdk \
-  adapta-gtk-theme \
-  pacman-contrib \
-  peek \
-  gnome-keyring \
-  lsof \
-  expect \
-  wmname \
-  imagemagick \
-  arandr \
-  xclip \
-  man-db \
-  man-pages \
-  whois \
-  httpie \
-  zip \
-  unzip \
-  libmtp \
-  gvfs-mtp \
-  asunder \
-  docker \
-  inkscape \
-  yarn
-
 # install AUR packages
 (
   cd ~/repositories/
@@ -83,7 +24,64 @@ sudo pacman -Syyuq --noconfirm \
   export MAKEFLAGS="-j8"
 
   makepkg -si --noconfirm
+
   yay -Syyuq --noconfirm \
+    neovim \
+    picom \
+    xorg-xinit \
+    rofi \
+    xorg-server \
+    xf86-video-intel \
+    xorg-apps \
+    neofetch \
+    tree \
+    feh \
+    htop \
+    fish \
+    kitty \
+    time \
+    fcitx-im \
+    fcitx-configtool \
+    fcitx-mozc \
+    papirus-icon-theme \
+    nautilus \
+    alsa-utils \
+    ttf-fira-code \
+    noto-fonts-cjk \
+    ttf-fantasque-sans-mono \
+    noto-fonts-emoji \
+    lua \
+    ruby \
+    libinput \
+    xf86-input-libinput \
+    stack \
+    chromium \
+    rxvt-unicode \
+    xmonad-contrib \
+    scrot \
+    jdk-openjdk \
+    adapta-gtk-theme \
+    pacman-contrib \
+    peek \
+    gnome-keyring \
+    lsof \
+    expect \
+    wmname \
+    imagemagick \
+    arandr \
+    xclip \
+    man-db \
+    man-pages \
+    whois \
+    httpie \
+    zip \
+    unzip \
+    libmtp \
+    gvfs-mtp \
+    asunder \
+    docker \
+    inkscape \
+    yarn \
     breeze-default-cursor-theme \
     ttf-monaco \
     nerd-fonts-iosevka \
