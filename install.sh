@@ -95,7 +95,7 @@ sudo pacman -Syyuq --noconfirm \
 # see:
 # - https://aur.archlinux.org/packages/ncurses5-compat-libs/
 # - https://github.com/purescript/documentation/issues/119
-type -q /usr/lib/libtinfo.so.6 && sudo ln -s /usr/lib/libtinfo.so.{6,5}
+[[ -f /usr/lib/libtinfo.so.6 ]] && sudo ln -s /usr/lib/libtinfo.so.{6,5}
 
 # enable docker daemon
 sudo usermod -aG docker $(whoami)
