@@ -78,6 +78,10 @@ sudo pacman -Syyuq --noconfirm \
   cd ~/repositories/
   git clone https://aur.archlinux.org/yay.git
   cd yay
+
+  # https://github.com/Jguer/yay/issues/816
+  export MAKEFLAGS="-j8"
+
   makepkg -si --noconfirm
   yay -Syyuq --noconfirm \
     breeze-default-cursor-theme \
