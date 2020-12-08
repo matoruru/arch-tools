@@ -136,6 +136,7 @@ nvim -c :PlugInstall\|q\|q
 # Install coc extensions
 nvim -c :CocInstall\ -sync\
 \ coc-tsserver\
+\ coc-json\
 \ coc-sh\
 \ coc-vimlsp\
 \|q\|q
