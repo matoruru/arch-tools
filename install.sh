@@ -46,10 +46,13 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     papirus-icon-theme \
     nautilus \
     alsa-utils \
-    ttf-fira-code \
-    noto-fonts-cjk \
+    ttf-cascadia-code \
+    ttf-jetbrains-mono \
     ttf-fantasque-sans-mono \
+    nerd-fonts-iosevka \
     noto-fonts-emoji \
+    ttf-symbola \
+    noto-fonts-cjk \
     lua \
     ruby \
     libinput \
@@ -83,9 +86,6 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     inkscape \
     yarn \
     breeze-default-cursor-theme \
-    ttf-monaco \
-    nerd-fonts-iosevka \
-    ttf-symbola \
     haskell-language-server-bin \
     polybar
 )
