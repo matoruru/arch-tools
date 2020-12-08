@@ -131,7 +131,20 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install Vim plugins
-nvim -c :PlugInstall -c :q -c :q
+nvim -c :PlugInstall\|q\|q
+
+# Install coc extensions
+nvim -c :CocInstall\ -sync\
+\ coc-tsserver\
+\ coc-sh\
+\ coc-vimlsp\
+\|q\|q
+
+# Install lang servers for Coc extensions
+yarn global add \
+  bash-language-server \
+  vim-language-server \
+  vscode-json-languageservice
 
 # create executable file in path
 sudo cp screenshot.sh /usr/local/bin/
