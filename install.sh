@@ -38,7 +38,7 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     feh \
     htop \
     fish \
-    kitty \
+    alacritty \
     time \
     fcitx-im \
     fcitx-configtool \
@@ -59,7 +59,6 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     xf86-input-libinput \
     stack \
     chromium \
-    rxvt-unicode \
     xmonad-contrib \
     scrot \
     jdk-openjdk \
