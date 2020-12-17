@@ -37,6 +37,7 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     tree \
     feh \
     htop \
+    starship-bin \
     fish \
     alacritty \
     time \
@@ -47,7 +48,6 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     nautilus \
     alsa-utils \
     ttf-cascadia-code \
-    ttf-jetbrains-mono \
     ttf-fantasque-sans-mono \
     nerd-fonts-iosevka \
     noto-fonts-emoji \
