@@ -164,3 +164,6 @@ sudo chmod 755 /etc/X11/xinit/xinitrc.d/30-dbus.sh
 # for base16-shell
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 fish -c "source ~/.config/base16-shell/profile_helper.fish; base16-solarized-dark"
+
+# update origin
+bash update-origin.sh
