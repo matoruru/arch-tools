@@ -98,10 +98,9 @@ ping www.google.com -c5 -i 0.2 || ping_failure
 sudo usermod -aG docker $(whoami)
 sudo systemctl enable docker
 
-# copy Picture to ~/ and set wallpaper
-cp -r Pictures ~/
-mkdir   ~/.wallpapers
-curl -o ~/.wallpapers/1.jpg https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
+# download wallpaper
+curl -o ~/Pictures/.xmonad-wallpaper https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
+
 
 # install fish theme (yimmy)
 bash fish-theme.sh
