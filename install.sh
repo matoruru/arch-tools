@@ -39,6 +39,7 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     htop \
     starship-bin \
     fish \
+    kitty \
     alacritty \
     time \
     fcitx-im \
@@ -99,8 +100,8 @@ sudo usermod -aG docker $(whoami)
 sudo systemctl enable docker
 
 # download wallpaper
+mkdir ~/Pictures
 curl -o ~/Pictures/.xmonad-wallpaper https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
-
 
 # install fish theme (yimmy)
 bash fish-theme.sh
@@ -159,10 +160,6 @@ sudo ln -srf 40-libinput.conf /usr/share/X11/xorg.conf.d/
 # for dbus session
 sudo cp 30-dbus.sh /etc/X11/xinit/xinitrc.d/
 sudo chmod 755 /etc/X11/xinit/xinitrc.d/30-dbus.sh
-
-# for base16-shell
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-fish -c "source ~/.config/base16-shell/profile_helper.fish; base16-solarized-dark"
 
 # update origin
 bash update-origin.sh

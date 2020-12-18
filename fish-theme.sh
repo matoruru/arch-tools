@@ -24,9 +24,6 @@ else
    curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fi
 
-echo "   [Install simple-ass-prompt theme:]"
-fish -c "fisher install lfiolhais/theme-simple-ass-prompt"
-
 echo "   [Install git utils:]"
 fish -c "fisher install fishpkg/fish-git-util"
 
