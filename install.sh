@@ -60,7 +60,6 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     xf86-input-libinput \
     stack \
     chromium \
-    xmonad-contrib \
     scrot \
     jdk-openjdk \
     adapta-gtk-theme \
