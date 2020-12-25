@@ -86,8 +86,13 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     inkscape \
     yarn \
     breeze-default-cursor-theme \
-    haskell-language-server-bin \
     polybar
+)
+
+# install ghcup and haskell-language-server
+(
+  curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=true sh
+  ~/.ghcup/bin/ghcup install hls
 )
 
 # see:
