@@ -77,13 +77,12 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     docker \
     inkscape \
     yarn \
-    breeze-default-cursor-theme \
-    polybar
+    breeze-default-cursor-theme
 )
 
 # Parallel instalation
 (
-  # Install fonts (it takes long)
+  # Install packages that takes long time
   (
     yay -Syyuq --noconfirm \
       ttf-cascadia-code \
@@ -91,7 +90,8 @@ ping www.google.com -c5 -i 0.2 || ping_failure
       nerd-fonts-iosevka \
       noto-fonts-emoji \
       ttf-symbola \
-      noto-fonts-cjk
+      noto-fonts-cjk \
+      polybar
   ) &
 
   (
