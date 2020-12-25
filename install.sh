@@ -58,7 +58,6 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     ruby \
     libinput \
     xf86-input-libinput \
-    stack \
     chromium \
     scrot \
     jdk-openjdk \
@@ -92,6 +91,11 @@ ping www.google.com -c5 -i 0.2 || ping_failure
 (
   curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=true sh
   ~/.ghcup/bin/ghcup install hls
+)
+
+# install stack
+(
+  curl -sSL https://get.haskellstack.org/ | sh
 )
 
 # see:
