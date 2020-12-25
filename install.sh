@@ -48,12 +48,6 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     papirus-icon-theme \
     nautilus \
     alsa-utils \
-    ttf-cascadia-code \
-    ttf-fantasque-sans-mono \
-    nerd-fonts-iosevka \
-    noto-fonts-emoji \
-    ttf-symbola \
-    noto-fonts-cjk \
     lua \
     ruby \
     libinput \
@@ -87,15 +81,29 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     polybar
 )
 
-# install ghcup and haskell-language-server
+# Parallel instalation
 (
-  curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=true sh
-  ~/.ghcup/bin/ghcup install hls
-)
+  # Install fonts (it takes long)
+  (
+    yay -Syyuq --noconfirm \
+      ttf-cascadia-code \
+      ttf-fantasque-sans-mono \
+      nerd-fonts-iosevka \
+      noto-fonts-emoji \
+      ttf-symbola \
+      noto-fonts-cjk
+  ) &
 
-# install stack
-(
-  curl -sSL https://get.haskellstack.org/ | sh
+  (
+    # install ghcup and haskell-language-server
+    curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=true sh
+    ~/.ghcup/bin/ghcup install hls
+
+    # install stack
+    curl -sSL https://get.haskellstack.org/ | sh
+  ) &
+
+  wait
 )
 
 # see:
