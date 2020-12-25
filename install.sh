@@ -45,7 +45,6 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     fcitx-im \
     fcitx-configtool \
     fcitx-mozc \
-    papirus-icon-theme \
     nautilus \
     alsa-utils \
     lua \
@@ -76,8 +75,7 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     asunder \
     docker \
     inkscape \
-    yarn \
-    breeze-default-cursor-theme
+    yarn
 )
 
 # Parallel instalation
@@ -91,6 +89,8 @@ ping www.google.com -c5 -i 0.2 || ping_failure
       noto-fonts-emoji \
       ttf-symbola \
       noto-fonts-cjk \
+      breeze-default-cursor-theme \
+      papirus-icon-theme \
       polybar
   ) &
 
@@ -101,6 +101,9 @@ ping www.google.com -c5 -i 0.2 || ping_failure
 
     # install stack
     curl -sSL https://get.haskellstack.org/ | sh
+
+    # build xmonad
+    bash ~/.xmonad/build
   ) &
 
   wait
