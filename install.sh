@@ -27,6 +27,8 @@ ping www.google.com -c5 -i 0.2 || ping_failure
 
   yay -Syyuq --noconfirm \
     neovim \
+    tmux \
+    tmux-xpanes \
     picom \
     xorg-xinit \
     rofi \
@@ -79,9 +81,8 @@ ping www.google.com -c5 -i 0.2 || ping_failure
 )
 
 # Parallel instalation
-(
-  # Install packages that takes long time
-  (
+xpanes -l eh -c "{}" \
+  "\
     yay -Syyuq --noconfirm \
       ttf-cascadia-code \
       ttf-fantasque-sans-mono \
@@ -91,23 +92,18 @@ ping www.google.com -c5 -i 0.2 || ping_failure
       noto-fonts-cjk \
       breeze-default-cursor-theme \
       papirus-icon-theme \
-      polybar
-  ) &
+      polybar; \
+    exit; \
+  " \
+  "\
+    curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=true sh; \
+    ~/.ghcup/bin/ghcup install hls; \
 
-  (
-    # install ghcup and haskell-language-server
-    curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=true sh
-    ~/.ghcup/bin/ghcup install hls
+    curl -sSL https://get.haskellstack.org/ | sh; \
 
-    # install stack
-    curl -sSL https://get.haskellstack.org/ | sh
-
-    # build xmonad
-    bash ~/.xmonad/build
-  ) &
-
-  wait
-)
+    bash ~/.xmonad/build; \
+    exit; \
+  "
 
 # see:
 # - https://aur.archlinux.org/packages/ncurses5-compat-libs/
