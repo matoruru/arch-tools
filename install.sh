@@ -155,6 +155,7 @@ nvim -c :PlugInstall\|q\|q
 nvim -c :CocInstall\ -sync\
 \ coc-tsserver\
 \ coc-json\
+\ coc-css\
 \ coc-sh\
 \ coc-vimlsp\
 \|q\|q
@@ -163,7 +164,8 @@ nvim -c :CocInstall\ -sync\
 yarn global add \
   bash-language-server \
   vim-language-server \
-  vscode-json-languageservice
+  vscode-json-languageservice \
+  vscode-css-languageservice
 
 # create executable file in path
 sudo cp screenshot.sh /usr/local/bin/
