@@ -74,6 +74,7 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     gvfs-mtp \
     asunder \
     docker \
+    docker-compose \
     inkscape \
     yarn
 )
