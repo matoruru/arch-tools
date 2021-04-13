@@ -26,29 +26,20 @@ ping www.google.com -c5 -i 0.2 || ping_failure
   makepkg -si --noconfirm
 
   yay -Syyuq --noconfirm \
-    neovim \
     picom \
     xorg-xinit \
     rofi \
     xorg-server \
     xf86-video-intel \
     xorg-apps \
-    neofetch \
-    tree \
     feh \
-    htop \
-    starship-bin \
-    fish \
     kitty \
     alacritty \
-    time \
     fcitx-im \
     fcitx-configtool \
     fcitx-mozc \
     nautilus \
     alsa-utils \
-    lua \
-    ruby \
     libinput \
     xf86-input-libinput \
     chromium \
@@ -58,25 +49,16 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     pacman-contrib \
     peek \
     gnome-keyring \
-    lsof \
-    expect \
     wmname \
     imagemagick \
     arandr \
     xclip \
-    man-db \
-    man-pages \
-    whois \
-    httpie \
-    zip \
-    unzip \
     libmtp \
     gvfs-mtp \
     asunder \
     docker \
     docker-compose \
-    inkscape \
-    yarn
+    inkscape
 )
 
 # Parallel instalation
@@ -110,11 +92,6 @@ ping www.google.com -c5 -i 0.2 || ping_failure
   wait
 )
 
-# see:
-# - https://aur.archlinux.org/packages/ncurses5-compat-libs/
-# - https://github.com/purescript/documentation/issues/119
-[[ -f /usr/lib/libtinfo.so.6 ]] && sudo ln -s /usr/lib/libtinfo.so.{6,5}
-
 # enable docker daemon
 sudo usermod -aG docker $(whoami)
 sudo systemctl enable docker
@@ -122,51 +99,6 @@ sudo systemctl enable docker
 # download wallpaper
 mkdir ~/Pictures
 curl -o ~/Pictures/.xmonad-wallpaper https://www.gentoo.org/assets/img/wallpaper/gentoo-10/purple/1920x1080.jpg
-
-# install fish theme (yimmy)
-bash fish-theme.sh
-
-# npm
-export PATH=~/.npm-global/bin:$PATH
-
-# yarn
-export PATH=~/.yarn-global/bin:$PATH
-yarn config set prefix ~/.yarn-global
-
-# nodebrew
-export PATH=~/.nodebrew/current/bin:$PATH
-bash nodebrew.sh
-
-# Install purescript
-yarn global add \
-  purescript \
-  spago \
-  purescript-language-server \
-  pulp \
-  bower
-
-# install Plug
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# Install Vim plugins
-nvim -c :PlugInstall\|q\|q
-
-# Install coc extensions
-nvim -c :CocInstall\ -sync\
-\ coc-tsserver\
-\ coc-json\
-\ coc-css\
-\ coc-sh\
-\ coc-vimlsp\
-\|q\|q
-
-# Install lang servers for Coc extensions
-yarn global add \
-  bash-language-server \
-  vim-language-server \
-  vscode-json-languageservice \
-  vscode-css-languageservice
 
 # create executable file in path
 sudo cp screenshot.sh /usr/local/bin/
