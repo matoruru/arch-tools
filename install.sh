@@ -58,7 +58,8 @@ ping www.google.com -c5 -i 0.2 || ping_failure
     asunder \
     docker \
     docker-compose \
-    inkscape
+    inkscape \
+    peco
 )
 
 # Parallel instalation
